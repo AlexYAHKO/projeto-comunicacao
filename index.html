@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+    <div class="titulo">
+        <header>
+            <h1>titulo </h1>
+            <h2>subtitulo</h2>
+        </header>
+    </div>
+
+    <main>
+        <div class="container">
+            <button onclick="buscar()">
+                alex
+            </button>
+
+        </div>
+        <p id="demo">Este texto ira sumir </p>
+        <img src="http://source.unsplash.com/randm" alt="">
+    </main>
+    
+    
+    
+    <script>
+         function buscar() {
+            let url ="https://ec2-15-229-117-231.sa-east-1.compute.amazonaws.com/hello"
+            fetch(url)
+                .then(resposta => resposta.json())
+                .then(dados => document.getElementById("demo").innerHTML = dados.message)
+
+        }
+
+       
+    </script>
+</body>
+
